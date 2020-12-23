@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import TicTacToeGrid from './TicTacToe/TicTacToeGrid'
 
 function App() {
+  const refresh = () => {
+    window.location.reload()
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome to TicTacToe Game</h1>
+      
+      <TicTacToeGrid/>
+      <div className="btn">
+        <button type="reset" onClick={refresh}>Reset</button>
+      </div>
     </div>
   );
 }
